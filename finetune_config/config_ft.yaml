@@ -1,0 +1,104 @@
+batch_size: 64
+epochs: 50
+eval_every_n_epochs: 1
+fine_tune_from: ./runs_nf/Jan05_14-29-48/jarvis_ehull
+#./runs_nf/Jan07_07-55-51/mp_gap
+#./runs_nf/Jan05_14-29-48/jarvis_ehull
+#./runs_nf/Jan05_14-29-48/jarvis_ehull./runs_nf/Jan07_07-55-51/mp_gap
+#./runs_nf/Jan07_07-55-51/mp_gap
+#./runs_nf/Jan07_07-55-51/mp_gap
+#./runs_nf/Jan05_14-29-48/jarvis_ehull
+#./runs_nf/Jan07_07-55-51/mp_gap 
+#./runs_contrast/OQMD_weight_shear_add
+#./runs_contrast/Mar30_02-21-15
+#Mar30_02-21-15
+#./runs_contrast/Mar12_10-41-16
+#./runs_contrast/Mar06_16-27-49
+#./runs_contrast/Feb27_02-08-08
+#./runs_contrast/Dec01_17-00-50
+#./runs_contrast/Oct30_17-55-19
+#./runs_contrast/Oct28_00-50-41
+# fine_tune_from: runs_contrast/Apr21_18-05-12
+log_every_n_steps: 100
+gpu: cuda:0
+random_seed: 3407
+task: 'regression'
+target_dataset: mp_gap
+#jarvis_ehull
+#mp_gap
+#mp_formation
+#mp_bulk
+#mp_shear
+#jarvis_formation
+#jarvis_gap_opt
+#jarvis_gap_mbj
+#jarvis_total
+#jarvis_ehull
+#log_gvrh
+#perovskites
+#matbench_perovskites
+#matbench_log_gvrh
+#matbench_phonons
+#matbench_log_gvrh
+#matbench_jdft2d
+#matbench_log_kvrh
+#matbench_perovskites
+#matbench_dielectric
+#matbench_jdft2d 
+#matbench_phonons
+#matbench_perovskites 
+#matbench_log_gvrh 
+#matbench_dielectric 
+#matbench_phonons
+#matbench_jdft2d
+#matbench_phonons
+#matbench_dielectric
+#matbench_jdft2d
+#matbench_dielectric
+#matbench_log_gvrh
+#matbench_mp_e_form
+#matbench_phonons
+#matbench_log_kvrh
+#matbench_phonons (200)
+#matbench_dielectric
+#matbench_mp_e_form(100)
+#matbench_perovskites
+#matbench_log_kvrh(100)
+#matbench_log_gvrh(150)
+# matbench_dielectric
+iter_num: 5
+
+optim:
+  optimizer: Adam
+  #Adam
+  lr: 0.001
+  lr_fine: 0.005
+  #0.001
+  momentum: 0.9
+  weight_decay: 0.00001
+  #0.00000001
+  #0.00001
+  #6
+
+model: 
+  atom_fea_len: 64
+  h_fea_len: 64
+  n_conv: 3
+  n_h: 1
+
+dataset:
+  root_dir: /data/cs.aau.dk/haominyu/cdvae/Dataset/MP_DATA_finetest/
+  goal: band_gap
+
+  max_num_nbr: 12
+  radius: 8
+  dmin: 0
+  step: 0.2
+
+
+dataloader:
+  val_ratio: 0.2
+  test_ratio: 0.2
+  num_workers: 0
+
+
