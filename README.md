@@ -1,6 +1,6 @@
 # KBSS
 This is a PyTorch implementation of the paper: A Knowledge-Based Semi-Supervised Crystal Property Prediction Framework with Consistency Regularization.
-`@author:Haomin Yu, Jilin Hu, Chenjuan Guo, Yizhou Zhu, Bin Yang
+`@author: Haomin Yu, Jilin Hu, Chenjuan Guo, Yizhou Zhu, Bin Yang`
 
 ## Requirements
 - arrow==0.15.4
